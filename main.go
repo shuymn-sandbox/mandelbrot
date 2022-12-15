@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-//go:embed static
+//go:embed docs
 var static embed.FS
 
 func main() {
@@ -16,7 +16,7 @@ func main() {
 	fmt.Printf("open http://%s/\n", addr)
 	fmt.Println("press ctrl-c to stop")
 
-	root, err := fs.Sub(static, "static")
+	root, err := fs.Sub(static, "docs")
 	if err != nil {
 		panic(err)
 	}

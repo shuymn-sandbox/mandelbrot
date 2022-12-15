@@ -6,7 +6,7 @@ build: build-wasm
 
 .PHONY: build-wasm
 build-wasm:
-	tinygo build -o ./static/wasm/main.wasm ./lib/main.go
+	tinygo build -o ./docs/wasm/main.wasm ./lib/main.go
 
 .PHONY: server
 server: build
